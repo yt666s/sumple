@@ -1,0 +1,204 @@
+@use "mixin" as mixin;
+
+.contact {
+    padding-top: 0;
+
+    .title {
+        background-image: url(../img/contact-img.png);
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+
+        p {
+            margin-block: 40px;
+            display: inline-block;
+            font-family: "jejuhallasan";
+            color: rgba(59, 193, 19, 0.5);
+            font-size: 48px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 10px;
+                background-color: rgba(109, 61, 30, 0.3);
+                bottom: 5px;
+                left: 0;
+                z-index: 80;
+                display: block;
+            }
+
+            @include mixin.tab {
+                font-size: 32px;
+            }
+
+        }
+    }
+
+    .contacts {
+        background-image: url(../img/background-img2.png);
+        background-size: cover;
+        padding-bottom: 150px;
+
+        h3 {
+            padding-block: 80px;
+            font-family: "aosagi";
+            color: rgb(2, 165, 83);
+            font-weight: 100;
+            font-size: 24px;
+            text-align: center;
+
+            @include mixin.tab {
+                font-size: 16px;
+            }
+        }
+
+        .form-note {
+            background-color: white;
+            margin-inline: auto;
+            max-width: 900px;
+            padding: 40px;
+            border-left: 50px solid rgba(59, 193, 19, 0.65);
+            box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+
+
+            @include mixin.tab {
+                padding: 20px;
+                border-left: 30px solid rgba(59, 193, 19, 0.65);
+            }
+
+            p {
+                font-size: 14px;
+                margin-bottom: 5px;
+
+                a {
+                    text-decoration: underline;
+                    display: inline;
+                    font-family: normal;
+                    font-size: 14px;
+                }
+
+                &:first-child {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            dl {
+                margin-top: 30px;
+                font-size: 14px;
+
+                dt {
+                    margin-block: 10px;
+
+                    span {
+                        font-size: 10px;
+                        color: white;
+                        background-color: black;
+                        border-radius: 10px;
+                        padding: 2px 5px;
+                        margin-left: 10px;
+                    }
+                }
+
+                dd {
+
+                    select,
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid;
+                        border-radius: 10px;
+                    }
+
+                    select {
+                        appearance: menulist;
+                    }
+
+                    textarea {
+                        height: 200px;
+                    }
+
+
+                }
+
+                .questionnaire {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid;
+                    border-radius: 10px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+
+                    @include mixin.tab {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    input {
+                        width: auto;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                    }
+
+                }
+
+            }
+        }
+
+        .submit-memo {
+            max-width: 500px;
+            height: 100%;
+            padding: 60px 20px;
+            margin-inline: auto;
+            background-image: url(../img/memo.png);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            margin-top: 50px;
+
+            p {
+                margin-bottom: 15px;
+
+                a {
+                    text-decoration: underline;
+                    display: inline;
+                    font-family: normal;
+                    font-size: 14px;
+                }
+            }
+
+            label {
+                font-size: 12px;
+                display: inline-block;
+                background-color: white;
+                max-width: 350px;
+                padding: 10px;
+                margin-block: 20px;
+                border-left: 10px solid rgba(59, 193, 19, 0.65);
+
+                input {
+                    margin-right: 10px;
+                }
+            }
+
+            .couse {
+                margin-right: 10px;
+            }
+
+            .submit {
+                padding: 5px 15px;
+                font-family: "RocknRoll One", serif;
+                font-weight: 400;
+                font-style: normal;
+                background-color: rgb(249, 113, 17);
+                border-radius: 15px;
+            }
+        }
+
+
+    }
+
+
+}
